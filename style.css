@@ -14,14 +14,15 @@ h1{
     margin: 100px auto 50px;
     font-weight: 600;
 }
+
 form{
     width: 90%;
     max-width: 600px;
     margin: auto;
+    border-radius: 50px;
     height: 80px;
     background: #434989;
     display: flex;
-    border-radius: 8x;
 
 }
 form input{
@@ -42,9 +43,16 @@ form button{
     font-size: 18px;
     border: 0;
     outline: 0;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
     cursor: pointer;
+    transition:  0.5s;
+    
+
+ }
+ form button:hover{
+    background-color: #fff;
+    color: #000;
  }
  ::placeholder{
     color: #ffffff69;
@@ -80,3 +88,14 @@ form button{
  #search-result :hover{
     transform: scale(1.1);
 }
+@media only screen and (max-width: 600px) {
+   #search-result{
+    grid-template-columns: 1fr  ;
+   }
+  }
+  form{
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+  }
