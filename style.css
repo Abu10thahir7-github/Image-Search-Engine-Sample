@@ -5,14 +5,15 @@
     box-sizing: border-box;
 }
 body{
-    background: #39297b;
-    color: #fff;
-
+   background: linear-gradient(132deg, rgb(146, 11, 126) 0.00%, rgb(52, 29, 49) 100.00%);
+   height:1px;
+   width: 100%;
+   color: #fff;
 }
 h1{
     text-align: center;
-    margin: 100px auto 50px;
     font-weight: 600;
+    padding: 55px 0 26px;
 }
 
 form{
@@ -21,7 +22,7 @@ form{
     margin: auto;
     border-radius: 50px;
     height: 80px;
-    background: #434989;
+    background: #222228;
     display: flex;
 
 }
@@ -30,10 +31,12 @@ form input{
     height: 100%;
     border: 0;
     outline: 0;
-    background: transparent;
-    color: #fff;
+    background: #222228;
+    color: #ffffff;
     font-size: 18px;
-    padding: 0 30px;
+    text-align: center;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 form button{
     padding: 0 40px;
@@ -57,6 +60,7 @@ form button{
  ::placeholder{
     color: #ffffff69;
     font-size: 18px;
+    margin-left: 22px;
  }
  #show-more-btn{
     background: #ff3929;
@@ -66,8 +70,13 @@ form button{
     padding: 10px 20px;
     border-radius: 4px;
     margin: 10px auto 100px;
-    cursor: pointer;
+  transition: 0.3s;
     display: none;
+ }
+ #show-more-btn:hover{
+   cursor: pointer;
+  background: #fff;
+  color: rgb(0, 0, 0);
  }
  #search-result{
     width: 80%;
@@ -88,6 +97,11 @@ form button{
  #search-result :hover{
     transform: scale(1.1);
 }
+@media only screen and (max-width: 880px) {
+   #search-result{
+    grid-template-columns: 1fr 1fr ;
+   }
+  }
 @media only screen and (max-width: 600px) {
    #search-result{
     grid-template-columns: 1fr  ;
@@ -95,7 +109,8 @@ form button{
   }
   form{
     width: 90%;
-    max-width: 600px;
+    max-width: 601px;
     display: flex;
     justify-content: center;
   }
+ 
